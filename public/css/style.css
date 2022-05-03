@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ROOT */
 
 * {
   padding: 0;
@@ -7,22 +9,37 @@
 }
 
 body {
-  background: rgb(50, 50, 50);
   padding: 0;
   margin: 0;
+}
+
+section {
+  padding: 25px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+.container  {
+  margin: auto;
+  max-width: 80%;
+  margin-top: 50px;
+}
+
 /* CORE UPSIDE and refactors */
-/* navbar */ 
+
+
+/* -----navbar----- */ 
 a {
   color: #fff;
   text-decoration: none;
   transition: 0.5s;
   opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 18px;
 }
 
 a:hover {
@@ -31,10 +48,9 @@ a:hover {
   border-radius: 5px;
 }
 
-.logo, nav{
+.logo {
   font-family: 'Pacifico', cursive;
   font-style: italic;
-  font-weight: 100;
   font-size: 18px;
 }
 
@@ -42,8 +58,9 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.286);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 8vh;
+  width: 100vw;
 }
 
 .nav-list {
@@ -52,16 +69,16 @@ nav {
 }
 
 .nav-list li{
-  padding: 5px;
+  padding: 10px;
 }
-
-/* -------- navbar-mobile  -------- */
 
 .mobile-menu {
   color: #fff;
   cursor: pointer;
   display: none;
 }
+
+/* -------- navbar-mobile  -------- */
 
 @media (max-width:999px) {
   body {
@@ -72,7 +89,7 @@ nav {
     position: absolute;
     width: 100vw;
     height: 45vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -93,6 +110,7 @@ nav {
 }
 
 .nav-list.active {
+  padding: 10px;
   transform: translateY(0);
   top: 8vh;
 }
@@ -106,3 +124,133 @@ nav {
   }
 }
 /* -------- navbar-mobile end  -------- */
+/* -------- title section -------- */
+#title {
+  background-color: rgb(50, 50, 50);
+}
+
+
+h2, h3 {
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 25px;
+  color: #fff;
+}
+
+p, button {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.dots {
+  width: 100%;
+  display: flex;
+  margin-top: 20%;
+  justify-content: center;
+}
+
+.dots label {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dots label:hover {
+  background: #0e867e;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 12px 50px;
+  background: #0e6c66;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*----------------- button animation -----------------*/
+
+button:hover {
+  background: #0e867e;
+}
+
+/*----------------- button animation -----------------*/
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.right {
+  padding: 0;
+  margin: 0;
+  place-items: center;
+}
+
+.img-title {
+  max-width: 75%;
+  display: block;
+  min-width: 250px; /* MAYBE I CAN REMOVE THIS I DON'T KNOW */
+}
+
+.img-start{
+  display: flex;
+  justify-content: center;
+}
+/* -------- title section END -------- */
+/* -------- about section Start -------- */
+
+#about {
+  background-color: #fff;
+}
+
+#about p {
+  color: rgb(67, 66, 66);
+}
+
+#about .container {
+  margin-top: 20px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  place-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.info {
+  padding: 5px;
+}
+
+h3 {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+img {
+  width: 65px;
+  margin-bottom: 10px;
+}
+
+.img-about {
+  width: 350px;
+}
+
+/* -------- about section END -------- */
