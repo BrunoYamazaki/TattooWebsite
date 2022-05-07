@@ -57,6 +57,7 @@ window.onload = () => {
       filterImg.forEach(image => {
         let filterImages = image.getAttribute('data-name')
         if (filterImages == filterName || filterName == 'All') {
+          image.classList.remove('hide')
           image.classList.add('show')
         } else {
           image.classList.add('hide')
@@ -64,5 +65,30 @@ window.onload = () => {
         }
       })
     }
+  }
+  for (let index = 0; index < filterImg.length; index++) {
+    filterImg[index].setAttribute('onclick', 'preview(this)') //adding onclick attribute in all avaibale images
+  }
+}
+
+//preview script
+const previewBox = document.querySelector('.preview-box')
+previewImg = previewBox.querySelector('img')
+categoryName = previewBox.querySelector('.prev-title p')
+closeIcon = previewBox.querySelector('.close-icon')
+shadow = document.querySelector('.shadow')
+
+//fullscreen function
+function preview(element) {
+  let selectedPrevImg = element.querySelector('img').src // getting user clicked img
+  let selectedImgCategory = element.getAttribute('data-name') // getting user clicked data-name
+  categoryName.textContent = selectedImgCategory //passing the data-name value to category name variable
+  previewImg.src = selectedPrevImg //passing the user clicked img source in the preview image source
+  previewBox.classList.add('show') //show the preview box
+  shadow.classList.add('show') //hide the light of background in preview
+  closeIcon.onclick = () => {
+    // if user click on close icon
+    shadow.classList.remove('show') //hide the light of background in preview
+    previewBox.classList.remove('show') //hide the preview box
   }
 }

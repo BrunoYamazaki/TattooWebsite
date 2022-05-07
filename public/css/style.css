@@ -11,6 +11,7 @@
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 section {
@@ -307,7 +308,16 @@ img {
 }
 
 .gallery .image.show{
-  display: block;
+  animation: animate  0.4s ease;
+}
+
+@keyframes animate{
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
 .gallery {
@@ -334,6 +344,81 @@ img {
 .gallery .image:hover img{
   transform: scale(1.1);
 }
+/* --- gallery PREVIEW BOX --- */
+
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgb(73, 73, 73);
+  border-radius: 3px;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.shadow.show {
+  display: block;
+}
+
+.preview-box .details{
+  display: flex;
+  align-items: center;
+  padding: 13px 15px 13px 10px;
+  justify-content: space-between;
+}
+
+.preview-box .details .prev-title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.details .prev-title p{
+  font-size: 18px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.details .icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.preview-box .image-box{
+  display: flex;
+  width: 100%;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+
+/* --- gallery PREVIEW BOX end --- *
+
 /* --- gallery BRAKEPOINTS --- */
 /* --- gallery BRAKEPOINTS --- */
 
