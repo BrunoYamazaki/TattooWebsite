@@ -3,7 +3,7 @@ class MobileNavbar {
     this.mobileMenu = document.querySelector(mobileMenu)
     this.navList = document.querySelector(navList)
     this.navLinks = document.querySelectorAll(navLinks)
-    this.activeClass = 'active'
+    this.activeClass = 'active-mbm'
 
     this.handleClick = this.handleClick.bind(this)
   }
@@ -41,13 +41,28 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init()
 
-/* var menuitem = document.getElementById('menuitem')
-menuitem.style.maxHeight = '0px'
+//Gallery SCRIPT
+const filterItem = document.querySelector('.items')
+const filterImg = document.querySelectorAll('.image')
 
-function menutoggle() {
-  if (menuitem.style.maxHeight == '0px') {
-    menuitem.style.maxHeight = '200px'
-  } else {
-    menuitem.style.maxHeight = '0px'
+window.onload = () => {
+  //once window loaded
+  filterItem.onclick = selectedItem => {
+    //when user clicked on fileterItem div
+    if (selectedItem.target.classList.contains('item')) {
+      //if user click element has .item class
+      filterItem.querySelector('.active').classList.remove('active') //remove the active class wich is in the first element
+      selectedItem.target.classList.add('active') //add that class on user selected element item
+      let filterName = selectedItem.target.getAttribute('data-name') //getting data-name value of the user selected item and storing in a filter name variable or user item data-name value equal to "all"
+      filterImg.forEach(image => {
+        let filterImages = image.getAttribute('data-name')
+        if (filterImages == filterName || filterName == 'All') {
+          image.classList.add('show')
+        } else {
+          image.classList.add('hide')
+          image.classList.remove('show')
+        }
+      })
+    }
   }
-} */
+}

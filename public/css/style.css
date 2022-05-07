@@ -39,7 +39,7 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 23px;
 }
 
 a:hover {
@@ -51,7 +51,7 @@ a:hover {
 .logo {
   font-family: 'Pacifico', cursive;
   font-style: italic;
-  font-size: 18px;
+  font-size: 23px;
 }
 
 nav {
@@ -61,6 +61,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.8);
   height: 8vh;
   width: 100vw;
+  max-width: 100%;
 }
 
 .nav-list {
@@ -83,6 +84,7 @@ nav {
 @media (max-width:999px) {
   body {
     overflow-y: hidden;
+    overflow-y: scroll;
   }
 
   .nav-list{
@@ -109,7 +111,7 @@ nav {
   }
 }
 
-.nav-list.active {
+.nav-list.active-mbm {
   padding: 10px;
   transform: translateY(0);
   top: 8vh;
@@ -203,7 +205,7 @@ button:hover {
 .img-title {
   max-width: 75%;
   display: block;
-  min-width: 250px; /* MAYBE I CAN REMOVE THIS I DON'T KNOW */
+  min-width: 350px; /* MAYBE I CAN REMOVE THIS I DON'T KNOW */
 }
 
 .img-start{
@@ -254,3 +256,85 @@ img {
 }
 
 /* -------- about section END -------- */
+/* -------- gallery section start -------- */
+
+#gallery {
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+} 
+
+#gallery nav {
+  background-color: rgb(50, 50, 50);
+}
+
+#gallery h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+#gallery .item{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #0e6c66;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+  margin: 5px; 
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.active,
+.item:hover{
+  background-color: #0e6c66;
+}
+
+#gallery img {
+  width: 100%;
+  display: block;
+  max-width: 500px;
+  margin-bottom: 0;
+}
+
+.gallery .image.hide{
+  display: none;
+}
+
+.gallery .image.show{
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery > div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.gallery .image span {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery .image img{
+  transition: all 0.2s ease-in;
+  vertical-align: middle;
+}
+
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+/* --- gallery BRAKEPOINTS --- */
+/* --- gallery BRAKEPOINTS --- */
+
+/* -------- gallery section END -------- */
