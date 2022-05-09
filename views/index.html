@@ -11,6 +11,10 @@
       src="https://kit.fontawesome.com/ce74ab369c.js"
       crossorigin="anonymous"
     ></script>
+    <!--- SWIPERJS --->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>Tattoo Website</title>
   </head>
 
@@ -152,6 +156,85 @@
     <div class="shadow"></div>
 
     </section>
+
+    <section id="testimonials">
+      <h3>What Says Our Client</h3>
+      <div class="testimonials">
+        <div class="container">
+          <div class="swiper swiperContainer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <img src="image/c1.jpg" alt="">
+                  <blockquote><i class="fa-solid fa-quote-right"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quos quas, totam, cupiditate ex rerum quibusdam exercitationem accusamus magnam, reiciendis placeat nobis perferendis vel eum error esse sequi praesentium.</blockquote>
+                  <figcaption>Any One</figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="image/c3.jpg" alt="">
+                  <blockquote><i class="fa-solid fa-quote-right"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quos quas, totam, cupiditate ex rerum quibusdam exercitationem accusamus magnam, reiciendis placeat nobis perferendis vel eum error esse sequi praesentium.</blockquote>
+                  <figcaption>Any One</figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="image/c2.jpg" alt="">
+                  <blockquote><i class="fa-solid fa-quote-right"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quos quas, totam, cupiditate ex rerum quibusdam exercitationem accusamus magnam, reiciendis placeat nobis perferendis vel eum error esse sequi praesentium.</blockquote>
+                  <figcaption>Any One</figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="image/c3.jpg" alt="">
+                  <blockquote><i class="fa-solid fa-quote-right"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quos quas, totam, cupiditate ex rerum quibusdam exercitationem accusamus magnam, reiciendis placeat nobis perferendis vel eum error esse sequi praesentium.</blockquote>
+                  <figcaption>Any One</figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="image/c2.jpg" alt="">
+                  <blockquote><i class="fa-solid fa-quote-right"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quos quas, totam, cupiditate ex rerum quibusdam exercitationem accusamus magnam, reiciendis placeat nobis perferendis vel eum error esse sequi praesentium.</blockquote>
+                  <figcaption>Any One</figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="image/c1.jpg" alt="">
+                  <blockquote><i class="fa-solid fa-quote-right"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quos quas, totam, cupiditate ex rerum quibusdam exercitationem accusamus magnam, reiciendis placeat nobis perferendis vel eum error esse sequi praesentium.</blockquote>
+                  <figcaption>Any One</figcaption>
+                </figure>
+              </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- swiperjs script -->
+    <script>
+      new Swiper(".swiperContainer", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 4500,
+          pauseOnMouseEnter: true
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+       breakpoints: {
+        1100: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 30
+          }
+        }
+      })
+    </script>
+
   </body>
 </html>

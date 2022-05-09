@@ -417,9 +417,85 @@ img {
   border-radius: 0 0 3px 3px;
 }
 
-/* --- gallery PREVIEW BOX end --- *
-
-/* --- gallery BRAKEPOINTS --- */
-/* --- gallery BRAKEPOINTS --- */
-
+/* --- gallery PREVIEW BOX end --- */
 /* -------- gallery section END -------- */
+/* --- TESTIMONIALS START --- */
+
+#testimonials h3 {
+  font-size: 35px;
+}
+
+#testimonials {
+  background: #fff;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.swiper {
+  padding-top: 50px;
+}
+
+.swiper figure{
+  padding-top: 18.5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: ease .4s;
+}
+
+.swiper figure img{
+  object-fit: cover;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.15);
+  transition: ease .4s;
+}
+
+.swiper figure blockquote,
+.swiper figure figcaption{
+  text-align: center;
+}
+
+.swiper figure blockquote{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.swiper figure blockquote .quote {
+  display: block;
+  font-size: 36px;
+}
+
+.swiper figure figcaption{
+  font-size: 28px;
+  font-weight: 700px;
+}
+
+.swiper figure:hover{
+  transform: translateY(-10px);
+}
+
+.swiper figure:hover img {
+  transform: scale(1.1);
+}
+
+.swiper .swiper-pagination {
+  position: relative;
+  bottom: inherit;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+}
+
+
+
+/* --- TESTIMONIALS START --- */
