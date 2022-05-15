@@ -21,38 +21,54 @@
   <body>
     <header>
       <nav>
-        <a href="/" class="logo">Tattoo Website</a>
+        <div class="nav-a">
+          <a href="/" class="logo">Tattoo Website</a>
+        </div>
         <div class="mobile-menu">
           <div class="fa-solid fa-bars"></div>
         </div>
-        <ul class="nav-list">
-          <li><a href="">Home</a></li>
-          <li><a href="#gallery">Galeria</a></li>
-          <li><a href="">Serviços</a></li>
-          <li><a href="">Testimonials</a></li>
-          <li>
-            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-          </li>
-        </ul>
+          <ul class="nav-list">
+            <div class="nav-a"><li><a href="">Home</a></li></div>
+            <div class="nav-a"><li><a href="#gallery">Galeria</a></li></div>
+            <div class="nav-a"><li><a href="">Serviços</a></li></div>
+            <div class="nav-a"><li><a href="">Testimonials</a></li></div>
+          </ul>
     </header>
 
     <section id="title">
       <div class="container">
         <div class="grid1">
           <div class="right">
-            <h2>Best tattoo</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Blanditiis odio facilis esse, cumque laudantium suscipit, magnam
-              enim eum a quo tempora sequi maxime soluta nihil optio omnis
-              adipisci aspernatur voluptates?
-            </p>
-            <button type="button" name="button">Read More</button>
-            <div class="dots">
-              <label></label>
-              <label></label>
-              <label></label>
+            <div class="carousel">
+              <div class="carousel__item">
+                <h2>Best tattoo 1</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis odio facilis esse, 
+                </p>
+                <button type="button" name="button">Read More</button>
+              </div>
+              <div class="carousel__item">
+                <h2>Best tattoo 2</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis odio facilis esse, cumque laudantium suscipit, magnam
+                  enim eum a quo tempora sequi
+                </p>
+                <button type="button" name="button">Read More</button>
+              </div>
+              <div class="carousel__item">
+                <h2>Best tattoo 3</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis odio facilis esse, cumque laudantium suscipit, magnam
+                  enim eum a quo tempora sequi maxime soluta nihil optio omnis
+                  adipisci aspernatur voluptates?
+                </p>
+                <button type="button" name="button">Read More</button>
+              </div>
             </div>
+            
           </div>
 
           <div class="left">
@@ -211,8 +227,52 @@
       </div>
     </section>
 
+    <section id="footer">
+      <div class="container">
+        <div class="grid3">
+          <div class="right">
+            <h3>Nossas redes Sociais e Contato</h3>
+            <div class="sfe">
+              <div class="social-footer">
+                <a class="fa-brands fa-whatsapp fa-xl" href="#"></a>
+               </div>
+               <div class="social-footer">
+                 <a class="fa-brands fa-instagram fa-xl" href="#"></a>
+               </div>
+               <div class="social-footer">
+                 <a class="fa-brands fa-facebook-square fa-xl" href="#"></a>
+               </div>
+               <div class="social-footer">
+                 <a class="fa-solid fa-envelope fa-xl" href=""></a>
+               </div>
+            </div>
+            <div class="sfe">
+              <div class="contact">
+                <p>Email: exampleemail@gmail.com</p>
+              <p>Telefone: exampleemail@gmail.com</p>
+              <p>Whatsapp: (41) 99999-7777</p>
+              <p>Instagram: @tattoowebsite</p>
+              <p>Facebook: TattooWebsite</p>
+              </div>
+            </div>
+          </div>
+         <div class="left">
+          <div class="location">
+            <h3>Nossa localização</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.3203263440137!2d-49.20309968882502!3d-25.46097719423518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5a6a93507f471b%3A0x6a686faae9cbeec7!2sWell%20Tattoo%20art!5e0!3m2!1spt-BR!2sbr!4v1652465316447!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+         </div>
+        </div>
+      </div>
+      
+      
+    </section>
+
+
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- swiperjs script -->
     <script>
@@ -234,6 +294,8 @@
           }
         }
       })
+
+      ScrollReveal().reveal('.grid1');
     </script>
 
   </body>

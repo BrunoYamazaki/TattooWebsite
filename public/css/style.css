@@ -33,19 +33,24 @@ html {
 
 /* -----navbar----- */ 
 a {
-  color: #fff;
   text-decoration: none;
-  transition: 0.5s;
-  opacity: 1;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-weight: 100;
   font-size: 23px;
 }
 
-a:hover {
+.nav-a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.nav-a:hover {
   background-color: #0e6c66;
-  padding: 5px 10px;
+  padding: 2px 2px;
   border-radius: 5px;
 }
 
@@ -53,6 +58,7 @@ a:hover {
   font-family: 'Pacifico', cursive;
   font-style: italic;
   font-size: 23px;
+  padding: 10px;
 }
 
 nav {
@@ -98,13 +104,14 @@ nav {
     justify-content: space-around;
     padding: 0;
     margin-top: 0;
+    z-index: 2;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in;
   }
 
   .nav-list li {
     margin-top: -25px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
   }
 
   .mobile-menu{
@@ -127,11 +134,17 @@ nav {
   }
 }
 /* -------- navbar-mobile end  -------- */
+
+
+
 /* -------- title section -------- */
 #title {
   background-color: rgb(50, 50, 50);
 }
 
+.carousel__item {
+  transition: 0.5s ease-in;
+}
 
 h2, h3 {
   font-family: 'Pacifico', cursive;
@@ -145,19 +158,34 @@ p, button {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
 }
 
-.dots {
+.carousel {
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.carousel__item {
+  display: none;
+  transition: 0.5s;
+}
+
+.carousel__item--selected {
+  transition: 0.5s;
+  display: block;
+}
+
+.carousel__nav {
   width: 100%;
   display: flex;
   margin-top: 20%;
   justify-content: center;
 }
 
-.dots label {
-  width: 15px;
-  height: 15px;
+.carousel__button {
+  width: 35px;
+  height: 35px;
   background: #fff;
   margin: 0 10px;
   border-radius: 50%;
@@ -165,7 +193,11 @@ p, button {
   transition: 0.3s;
 }
 
-.dots label:hover {
+.carousel__button:hover {
+  background: #0e867e;
+}
+
+.carousel__button--selected {
   background: #0e867e;
 }
 
@@ -254,6 +286,9 @@ img {
 
 .img-about {
   width: 350px;
+  max-width: 75%;
+  display: block;
+  min-width: 350px; /* MAYBE I CAN REMOVE THIS I DON'T KNOW */
 }
 
 /* -------- about section END -------- */
@@ -491,11 +526,130 @@ img {
 }
 
 .swiper .swiper-pagination .swiper-pagination-bullet-active {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   background-color: #000;
 }
 
+/* --- TESTIMONIALS END --- */
 
+/* --- FOOTER --- */ 
+#footer {
+  background-color: rgb(50, 50, 50);;
+}
 
-/* --- TESTIMONIALS START --- */
+#footer  h3 {
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+#footer p {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.contact {
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.sfe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+}
+
+#footer .social-footer{
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  text-align: center;
+  line-height:50px;
+  margin-right: 20px;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+#footer .social-footer:hover {
+  border: 3px solid #0e6c66;
+  color: #0e6c66;
+}
+
+#footer a:hover {
+  color: #0e6c66;
+}
+
+.location {
+  text-align: center;
+}
+
+iframe {
+  width: 600px;
+  height: 400px;
+}
+/* --- FOOTER --- */ 
+
+/* --- BRAKEPOINTS--- */ 
+@media (max-width: 1253px) {
+
+  p, button, blockquote {
+    font-size: 20px;
+  }
+
+  /* TITLE */
+  .grid1 {
+    grid-template-columns: 1fr;
+  }
+
+  .img-title {
+    width: 700px;
+  }
+
+  /* TITLE end*/
+  .carousel__button {
+    margin-bottom: 20px;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .img-about {
+    width: 700px;
+  }
+
+  /* footer */
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  iframe {
+    width: 600px;
+    height: 400px;
+  }
+  /* footer */
+}
+
+@media (max-width: 760px) {
+  iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  iframe {
+    width: 300px;
+    height: 300px;
+  }
+}
+/* --- BRAKEPOINTS --- */ 
